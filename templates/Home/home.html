@@ -1,0 +1,195 @@
+{% extends 'shared/_MainLayout.html' %}
+{% load render_partial %}
+{% load static %}
+
+{% block content %}
+    {#search is here#}
+    <section class="u-align-left u-clearfix u-grey-90 u-section-1" id="sec-96d5">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <h1 class="u-align-center u-text u-text-default u-text-1">چە کلمە ای رو بە کردی میخوای؟</h1>
+            <div class="u-form u-form-1">
+                <form action="/words/search" method="get"
+                      class="u-clearfix u-form-custom-backend u-form-spacing-34 u-form-vertical u-inner-form"
+                      style="padding: 10px" source="custom" name="form" redirect="true">
+                    <div class="u-form-group u-form-name u-form-group-1">
+                        <label for="name-1d74" class="u-form-control-hidden u-label">Name</label>
+                        <input type="text" placeholder="Type a 🇮🇷  word or kurdish word" id="name-1d74" name="q"
+                               class="u-border-5 u-border-grey-80 u-border-radius-7 u-grey-80 u-input u-input-round"
+                               required="">
+                    </div>
+                    <div class="u-align-center u-form-group u-form-submit u-form-group-2">
+                        <a href="#" class="u-btn u-btn-rectangle u-btn-submit u-button-style u-palette-3-base u-btn-1">جست
+                            و جو<br>
+                        </a>
+                        <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
+                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent.</div>
+                    <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors
+                        then try again.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    {#result_search#}
+    {% for word in object_list %}
+        <section class="u-clearfix u-grey-90 u-section-2" id="sec-caad">
+            <div class="u-clearfix u-sheet u-sheet-1">
+                <div class="u-align-right u-border-radius-9 u-container-style u-grey-80 u-group u-shape-round u-group-1"
+                     data-animation-name="pulse" data-animation-duration="1000" data-animation-delay="0"
+                     data-animation-direction="" style="will-change: auto;">
+
+                    <div class="u-container-layout u-container-layout-1">
+                        <img src="{% static 'images/cloud.png' %}" alt="" class="u-image u-image-default u-image-1"
+                             data-image-width="18"
+                             data-image-height="13">
+                        <img src="{% static 'images/yes.png' %}" alt="" class="u-image u-image-default u-image-2"
+                             data-image-width="13"
+                             data-image-height="10">
+
+                        <p>فارسی</p>
+                            <p>{{ word.persian }}</p>
+
+                        <hr>
+                        <p>سۆرانی</p>
+                        <p style="font-size: large">{{ word.sorani }}</p>
+                        <hr>
+                        <p>مثال</p>
+                        <p>{{ word.simple_sorani }}</p>
+                        <hr>
+                        <p> اگر معنی این کلمە اشتباە است روی دکمە ✎(مداد) زیر کلیک کنید</p>
+                        <hr>
+                        <a href="/words/{{ word.id }}"><img src="{% static 'images/Edit.png' %}" alt="" class="u-image u-image-default u-image-3"
+                             data-image-width="16"
+                             data-image-height="16"></a>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    {% endfor %}
+
+    {#why_kurdi is here#}
+
+<section class="u-clearfix u-grey-90 u-section-3" id="sec-b0e2">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-border-5 u-border-palette-3-base u-line u-line-horizontal u-line-1"></div>
+      </div>
+    </section>
+    <section class="u-align-left u-clearfix u-grey-90 u-section-4" id="sec-af2b">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <p class="u-align-center u-text u-text-default u-text-1">{{count}}</p>
+                  <p class="u-align-center u-text u-text-default u-text-2">کلمە موجود در دیتابیس</p>
+                </div>
+              </div>
+              <div class="u-align-center u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <img src="{% static 'images/a4.png' %}" alt="" class="u-image u-image-default u-image-1" data-image-width="112" data-image-height="129">
+                  <img src="{% static 'images/a3.png' %}" alt="" class="u-image u-image-default u-image-2" data-image-width="122" data-image-height="130">
+                  <img src="{% static 'images/a5.png' %}" alt="" class="u-image u-image-default u-image-3" data-image-width="120" data-image-height="129">
+                  <h3 class="u-align-center u-text u-text-default u-text-3">مفتخریم کە داریم بە ملت ایران کردی یاد میدهیم</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-90 u-section-5" id="carousel_ae64">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-border-5 u-border-palette-3-base u-line u-line-horizontal u-line-1"></div>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-90 u-section-6" id="sec-3344">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-align-center u-text u-text-default u-title u-text-1">چرا زبان کردی ؟</h1>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-90 u-section-7" id="sec-d71a">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <h1 class="u-align-center u-text u-text-default u-title u-text-1">ایران</h1>
+                  <p class="u-align-center u-text u-text-2">اگر بە غرب کشورمون سفر کنید حتما بە زبان شیرین کردی نیاز پیدا خواهید کرد</p>
+                </div>
+              </div>
+              <div class="u-container-style u-image u-image-contain u-layout-cell u-right-cell u-size-30 u-image-1">
+                <div class="u-container-layout u-valign-bottom u-container-layout-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-90 u-section-8" id="carousel_ba1e">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-image u-image-contain u-layout-cell u-right-cell u-size-30 u-image-1">
+                <div class="u-container-layout u-valign-bottom u-container-layout-1"></div>
+              </div>
+              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <h1 class="u-align-center u-text u-text-default u-title u-text-1">عراق</h1>
+                  <p class="u-align-center u-text u-text-2">کردی در کنار عربی زبان رسمی عراق است و یکی از شریک های مهم اقتصادی&nbsp; کشورمان است</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-90 u-section-9" id="carousel_2be2">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <h1 class="u-align-center u-text u-text-default u-title u-text-1">ترکیە</h1>
+                  <p class="u-align-center u-text u-text-2">از ٨١ استان ترکیە ٢١ استان کرد زبان هستند</p>
+                </div>
+              </div>
+              <div class="u-container-style u-image u-image-contain u-layout-cell u-right-cell u-size-30 u-image-1">
+                <div class="u-container-layout u-valign-bottom u-container-layout-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-90 u-section-10" id="carousel_8543">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-image u-image-contain u-layout-cell u-right-cell u-size-30 u-image-1">
+                <div class="u-container-layout u-valign-bottom u-container-layout-1"></div>
+              </div>
+              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <h1 class="u-align-center u-text u-text-default u-title u-text-1">سوریە</h1>
+                  <p class="u-align-center u-text u-text-2">شمال و شرق این کشور بە زبان کردی صحبت می کنند</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-90 u-section-11" id="sec-277e">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-border-5 u-border-palette-3-base u-line u-line-horizontal u-line-1"></div>
+      </div>
+    </section>
+{% endblock %}

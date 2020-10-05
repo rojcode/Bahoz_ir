@@ -1,0 +1,82 @@
+{% extends 'shared/_MainLayout.html' %}
+{% load static %}
+
+{% block header_ref %}
+    <link rel="stylesheet" href="{% static 'Profile.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <section class="u-clearfix u-grey-90 u-section-1" id="sec-a72b">
+        <img class="u-expand-resize u-expanded-width u-image u-image-1"
+             src="{% static 'images/mazhar-zandsalimi-zBjX0th2YDE-unsplash.jpg' %}" data-image-width="5720"
+             data-image-height="3218" alt="{{ request.user.account.username }}">
+        <img src="{{ request.user.account.image.url }}" alt=""
+             class="u-border-radius-10 u-image u-image-round u-image-2" data-image-width="1242"
+             data-image-height="1550">
+        <h1 class="u-align-center u-text u-text-default u-text-grey-90 u-text-1">خوش آمدید</h1>
+        <p class="u-align-center u-text u-text-default u-text-palette-3-base u-text-2">{{ request.user.account.username }}</p>
+        <a href="/profile/update/{{request.user.pk}}"
+           class="u-border-radius-35 u-btn u-btn-round u-button-style u-palette-3-light-1 u-text-white u-btn-1">تغیر
+            اطلاعات شخصی</a>
+        <section class="u-clearfix u-grey-90 u-section-2" id="sec-c6bd">
+            <div class="u-clearfix u-sheet u-sheet-1">
+                <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+                    <div class="u-layout">
+                        <div class="u-layout-row">
+                            <div class="u-align-right u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+                                <div class="u-container-layout u-container-layout-1">
+                                    <h4 class="u-text u-text-default u-text-1">لیست درخواست های شما برای اصلاح کلمە&nbsp;</h4>
+                                    {% for wm in info %}
+                                        <div class="kurdish-info">
+                                        <div class="u-align-right u-border-radius-6 u-container-style u-grey-80 u-group u-shape-round u-group-1">
+                                            <div class="u-container-layout u-valign-bottom u-container-layout-2">
+                                                <h3>{{ wm.kurdish }}</h3>
+                                                <p>{{ wm.why_wrong }}</p>
+                                                <p>{{ wm.timestamp | timesince }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="u-align-right u-border-radius-10 u-container-style u-group u-palette-5-dark-2 u-shape-round u-group-2">
+                                            <div class="u-container-layout u-container-layout-3">
+                                                <p>{{ wm.answer }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+                                <div class="u-container-layout u-container-layout-4">
+                                    <h4 class="u-align-center u-text u-text-default u-text-6">ارتباط با مدیران</h4>
+                                    <div class="u-form u-form-1">
+                                        <form method="POST"
+                                              class="u-clearfix u-form-custom-backend u-form-spacing-32 u-form-vertical u-inner-form"
+                                              style="padding: 10px" source="custom" name="form" redirect="true">
+                                                {% csrf_token %}
+                                                {{ admin }}
+                                            <div class="u-align-center u-form-group u-form-submit u-form-group-3">
+                                                <a href="#"
+                                                   class="u-btn u-btn-submit u-button-style u-palette-3-base u-btn-1">ارسال
+                                                </a>
+                                                <input type="submit" value="submit" class="u-form-control-hidden">
+                                            </div>
+                                            <div class="u-form-send-message u-form-send-success"> Thank you! Your
+                                                message has been sent.
+                                            </div>
+                                            <div class="u-form-send-error u-form-send-message"> Unable to send your
+                                                message. Please fix
+                                                errors then try again.
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+{% endblock %}

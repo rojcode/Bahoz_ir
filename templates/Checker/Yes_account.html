@@ -1,0 +1,30 @@
+{% extends 'shared/_MainLayout.html' %}
+{% load static %}
+
+{% block header_ref %}
+    <link rel="stylesheet" href="{% static 'Page-1.css' %}">
+{% endblock %}
+{% block content %}
+    <section class="u-align-left u-clearfix u-grey-90 u-section-1" id="sec-3c5f">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+                <div class="u-layout">
+                    <div class="u-layout-row">
+                        <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+                            <div class="u-container-layout u-container-layout-1">
+                                <p class="u-align-center u-text u-text-default u-text-1">بلە</p>
+                                <p class="u-align-center u-text u-text-default u-text-2">حساب کاربری شما ساختە شد</p>
+                                <a href="/login"
+                                   class="u-border-radius-10 u-btn u-btn-round u-button-style u-palette-3-base u-btn-1">ورود
+                                    بە حساب</a>
+                            </div>
+                        </div>
+                        <div class="u-container-style u-image u-image-contain u-layout-cell u-right-cell u-size-30 u-image-1"
+                             data-image-width="445" data-image-height="313">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

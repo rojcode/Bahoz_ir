@@ -1,0 +1,30 @@
+{% extends 'shared/_MainLayout.html' %}
+{% load static %}
+
+{% block header_ref %}
+    <link rel="stylesheet" href="{% static 'Page-1.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class="u-clearfix u-grey-90 u-section-4" id="carousel_12d5">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <h1 class="u-align-center u-text u-text-default u-title u-text-1">!سلام</h1><br>
+                  <p class="u-align-center u-text u-text-default u-text-2">برای استفادە از امکانات سایت باید یک حساب کاربری داشتە باشید برای ساخت حساب کاربری فقط لازم است روی دکمە ساخت حساب کاربری زیر کلیک کنید یا اگر حساب کاربری دارید روی ورود کلیک کنید</p>
+                  <a href="/register" class="u-border-radius-10 u-btn u-btn-round u-button-style u-palette-2-base u-btn-1">ساخت حساب کاربری</a>
+                  <a href="/login" class="u-border-radius-10 u-btn u-btn-round u-button-style u-palette-3-base u-btn-2">ورود بە حساب کاربری</a>
+                </div>
+              </div>
+              <div class="u-container-style u-image u-image-contain u-layout-cell u-right-cell u-size-30 u-image-1">
+{#
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

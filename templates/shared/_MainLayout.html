@@ -1,0 +1,217 @@
+{% load static %}
+<!doctype html>
+<html lang="en" style="font-size: 16px;">
+<head>
+    {% include 'shared/Header_ref.html' %}
+    {% block header_ref %}{% endblock %}
+</head>
+<body>
+{#Navigation is here#}
+<header class="u-clearfix u-grey-90 u-header u-header" id="sec-2eb7">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        {% url 'home' as home_url %}
+        <a href="{{ home_url }}" class="u-image u-logo u-image-1 animated slideInDown-played"
+           data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0"
+           data-animation-direction="Down" style="will-change: transform; animation-duration: 1000ms;">
+            <img src="{% static 'images/Mamosta_logo.png' %}" class="u-logo-image u-logo-image-1"
+                 data-image-width="52.5715">
+
+        </a>
+
+        {% if  request.user.is_authenticated %}
+            {% url 'profile' as profile_url %}
+            <a href="{{ profile_url }}"><img alt="{{ request.user.username }}" class="u-image u-image-circle u-image-2" data-image-width="1242"
+                                             data-image-height="1550"
+                                             data-animation-name="pulse" data-animation-duration="1000"
+                                             data-animation-delay="0"
+                                             data-animation-direction="" style="will-change: auto;"
+                                             src="{{ request.user.account.image.url }}"/></a>
+        {% endif %}
+
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1 u-enable-responsive">
+            <div class="menu-collapse"
+                 style="font-size: 1rem; letter-spacing: 0; font-weight: 700; text-transform: uppercase;">
+                <a class="u-border-2 u-border-active-white u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-white u-text-hover-palette-3-light-1 u-text-white"
+                   href="#">
+                    <svg>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
+                    </svg>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                            <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;">
+                                <rect y="1" width="16" height="2"></rect>
+                                <rect y="7" width="16" height="2"></rect>
+                                <rect y="13" width="16" height="2"></rect>
+                            </symbol>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+            <div class="u-custom-menu u-nav-container">
+                <ul class="u-nav u-spacing-30 u-unstyled u-nav-1">
+                    {% url 'home' as home_url %}
+                    <li class="u-nav-item"><a
+                            class="u-border-2 u-border-{% if request.path == home_url %}active{% endif %}-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-{% if request.path == home_url %}active{% endif %}-white u-text-hover-palette-3-light-1 u-text-white {% if request.path == home_url %}active{% endif %}"
+                            class="u-border-2 u-border-{% if request.path == home_url %}active{% endif %}-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-{% if request.path == home_url %}active{% endif %}-white u-text-hover-palette-3-light-1 u-text-white {% if request.path == home_url %}active{% endif %}"
+                            href="{{ home_url }}" style="padding: 10px 0;">خانە</a>
+                    </li>
+
+                    {% if  request.user.is_authenticated%}
+                        {% url 'profile' as profile_url %}
+                    <li class="u-nav-item"><a
+                            class="u-border-2 u-border-{% if request.path == profile_url %}active{% endif %}-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-{% if request.path == home_url %}active{% endif %}-white u-text-hover-palette-3-light-1 u-text-white {% if request.path == home_url %}active{% endif %}"
+                            class="u-border-2 u-border-{% if request.path == profile_url %}active{% endif %}-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-{% if request.path == home_url %}active{% endif %}-white u-text-hover-palette-3-light-1 u-text-white {% if request.path == home_url %}active{% endif %}"
+                            href="{{ profile_url }}" style="padding: 10px 0;">پروفایل</a>
+                    </li>
+                        <li class="u-nav-item"><a
+                            class="u-border-2 u-border-{% if request.path == profile_url %}active{% endif %}-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-{% if request.path == home_url %}active{% endif %}-white u-text-hover-palette-3-light-1 u-text-white {% if request.path == home_url %}active{% endif %}"
+                            class="u-border-2 u-border-{% if request.path == profile_url %}active{% endif %}-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-{% if request.path == home_url %}active{% endif %}-white u-text-hover-palette-3-light-1 u-text-white {% if request.path == home_url %}active{% endif %}"
+                            href="/logout" style="padding: 10px 0;">خروج</a>
+                    </li>
+                    {% endif %}
+
+                    {% if request.user.is_authenticated == False %}
+                        {% url 'register' as register_url %}
+                        <li class="u-nav-item"><a
+                                class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-white u-text-hover-palette-3-light-1 u-text-white {% if request.path == register_url %}active{% endif %}"
+                                href="{{ register_url }}" style="padding: 10px 0;">ثبت نام</a>
+                        </li>
+                        {% url 'login' as login_url %}
+                        <li class="u-nav-item"><a
+                                class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-white u-text-hover-palette-3-light-1 u-text-white {% if request.path == login_url %}active{% endif %}"
+                                href="{{ login_url }}" style="padding: 10px 0;">ورود</a>
+                        </li>
+
+
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="u-custom-menu u-nav-container-collapse">
+                <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+                    <div class="u-menu-close"></div>
+                    <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                        {% url 'home' as home_url %}
+                        <li class="u-nav-item"><a
+                                class="u-button-style u-nav-link {% if request.path == home_url %}active{% endif %}"
+                                href="{{ home_url }}"
+                                style="padding: 10px 0;">خانە</a>
+
+
+                        </li>
+                        {% if  request.user.is_authenticated == False %}
+                            {% url 'register' as register_url %}
+                            <li class="u-nav-item"><a class="u-button-style u-nav-link active" href="{{ register_url }}"
+                                                      style="padding: 10px 0;">ثبت نام</a>
+                            </li>
+                            {% url 'login' as login_url %}
+                            <li class="u-nav-item"><a class="u-button-style u-nav-link active" href="{{ login_url }}"
+                                                      style="padding: 10px 0;"> ورود</a>
+                            </li>
+                        {% endif %}
+
+                        {% if  request.user.is_authenticated %}
+                            <li class="u-nav-item"><a class="u-button-style u-nav-link active" href="/profile"
+                                                      style="padding: 10px 0;"> پروفایل</a>
+                            </li>
+                        {% endif %}
+
+                     {% if  request.user.is_authenticated %}
+                            <li class="u-nav-item"><a class="u-button-style u-nav-link active" href="/logout"
+                                                      style="padding: 10px 0;"> خروج</a>
+                            </li>
+                        {% endif %}
+
+
+                    </ul>
+                </div>
+                <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+            </div>
+            <style class="offcanvas-style">
+                .u-offcanvas .u-sidenav {
+                    flex-basis: 250px !important;
+                }
+
+                .u-offcanvas:not(.u-menu-open-right) .u-sidenav {
+                    margin-left: -250px;
+                }
+
+                .u-offcanvas.u-menu-open-right .u-sidenav {
+                    margin-right: -250px;
+                }
+
+                @keyframes menu-shift-left {
+                    from {
+                        left: 0;
+                    }
+                    to {
+                        left: 250px;
+                    }
+                }
+
+                @keyframes menu-unshift-left {
+                    from {
+                        left: 250px;
+                    }
+                    to {
+                        left: 0;
+                    }
+                }
+
+                @keyframes menu-shift-right {
+                    from {
+                        right: 0;
+                    }
+                    to {
+                        right: 250px;
+                    }
+                }
+
+                @keyframes menu-unshift-right {
+                    from {
+                        right: 250px;
+                    }
+                    to {
+                        right: 0;
+                    }
+                }            </style>
+        </nav>
+    </div>
+</header>
+
+
+{% block content %}{% endblock %}
+
+
+{#Footer is here#}
+
+<footer class="u-clearfix u-footer u-grey-90" id="sec-ad1d">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+            <div class="u-gutter-0 u-layout">
+                <div class="u-layout-row">
+                    <div class="u-align-center-sm u-align-center-xl u-align-center-xs u-align-right-lg u-align-right-md u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+                        <div class="u-container-layout u-valign-top u-container-layout-1">
+                            <img src="{% static 'images/iran-flag-round-small.png' %}" alt=""
+                                 class="u-image u-image-contain u-image-default u-image-1" data-image-width="500"
+                                 data-image-height="500">
+                            <p class="u-text u-text-default u-text-1">این وب سایت تابع قوانین جمهوری اسلامی ایران است و
+                                تنها هدف ما آموزش زبان کردی بە هم وطن ها است</p>
+                        </div>
+                    </div>
+                    <div class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+                        <div class="u-container-layout u-valign-top u-container-layout-2">
+                            <a href="" class="u-image u-logo u-image-2" data-image-width="136" data-image-height="120">
+                                <img src="{% static 'images/Mamosta_logo.png' %}" class="u-logo-image u-logo-image-1"
+                                     data-image-width="104.037">
+                            </a>
+                            <p class="u-text u-text-2">ساختە شدە با&nbsp; ❤️ و مقدار زیادی قهوە</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
