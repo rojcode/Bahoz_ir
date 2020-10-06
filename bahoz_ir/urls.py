@@ -22,7 +22,7 @@ from .views import SearchWord,home_page,yes_page,not_found_page,logout_view,your
 from register_k.views import register_page
 from login_k.views import login_page
 from detailview.views import product_detail_view
-from profile_k.views import profile_page
+from profile_k.views import profile_page,team_list
 
 urlpatterns = [
     path('admin/',admin.site.urls),
@@ -38,6 +38,7 @@ urlpatterns = [
     path("logout",logout_view),
     path("your_voice",your_voice),
     path("sl",check_login),
+    path("bahoz_team/",team_list,name="bahoz_team"),
     ]
 
 if settings.DEBUG:

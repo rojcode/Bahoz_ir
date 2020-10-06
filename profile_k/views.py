@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 
 from contactAdmin.forms import ContactAdminForm
 from contactAdmin.models import ContactAdminModel
+from profile_k.models import Profile_Bio
 
 
 def profile_page(request):
@@ -24,3 +25,8 @@ def profile_page(request):
         }
 
     return render(request,"Profile/Profile.html",context)
+
+
+def team_list(request):
+    teams = Profile_Bio.objects.all()
+    return render(request,'team/team.html',{'teams': teams})
