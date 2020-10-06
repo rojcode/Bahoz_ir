@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'register_k',
     'account_k',
     'django_render_partial',
+    'profile_k',
     'wrongword',
     'kurdishdic',
     'contactAdmin',
