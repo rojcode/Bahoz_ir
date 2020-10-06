@@ -30,3 +30,5 @@ def profile_page(request):
 def team_list(request):
     teams = Profile_Bio.objects.all()
     return render(request,'team/team.html',{'teams': teams})
+
+
