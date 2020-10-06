@@ -50,7 +50,6 @@ class SearchWord(ListView):
 
     def get_queryset(self):
         request = self.request
-        print(request.GET)
         query = request.GET.get('q')
         lookup = (
                 Q(persian__icontains=query) |
