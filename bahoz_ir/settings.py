@@ -25,12 +25,12 @@ SECRET_KEY = '9+^fc6a4^46mr(%pe_@tye=4^m6gwp+@evjh9(uvsf$)pkugvb'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['www.bahoz.ir','bahoz.ir']
+
 
 # Application definition
 
 INSTALLED_APPS = [
-    'admin_interface',
-    'colorfield',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
