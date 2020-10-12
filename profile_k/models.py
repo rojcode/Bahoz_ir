@@ -5,10 +5,11 @@ from django.db import models
 
 
 class Profile_Bio(models.Model):
-    name = models.CharField(max_length=250)
-    image = models.ImageField(upload_to='Upload/image/profiles',blank=True)
-    job = models.CharField(max_length=250)
-    telegram = models.URLField(default="t.me/")
+    name = models.CharField(max_length=250,verbose_name="نام")
+    image = models.ImageField(upload_to='Upload/image/profiles',blank=True,verbose_name="عکس پرۆفایل")
+    job = models.CharField(max_length=250,verbose_name="جایگاە")
+    des = models.TextField(blank=True,verbose_name="توضیحات")
+    telegram = models.URLField(default="t.me/",verbose_name="ایدی تلگرام")
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now_add=True)

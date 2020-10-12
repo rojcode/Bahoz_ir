@@ -37,6 +37,10 @@ def check_login(request):
     return render(request,"Checker/login_signup.html",{})
 
 
+def join_us(request):
+    return render(request,"join_us/join_us.html",{})
+
+
 class SearchWord(ListView):
     template_name = 'Home/home.html'
     paginate_by = 6

@@ -64,6 +64,9 @@
                             href="{{ bahoz_team }}" style="padding: 10px 0;">تیم باهوز</a>
                     </li>
 
+
+
+
                     {% if  request.user.is_authenticated %}
                         {% url 'profile' as profile_url %}
                         <li class="u-nav-item"><a
@@ -115,6 +118,11 @@
 
 
                         </li>
+
+
+
+
+
                         {% if  request.user.is_authenticated == False %}
                             {% url 'register' as register_url %}
                             <li class="u-nav-item"><a class="u-button-style u-nav-link active" href="{{ register_url }}"
