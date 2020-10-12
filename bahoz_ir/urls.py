@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from bahoz_ir import settings
 from update_k_account.views import update_page
-from .views import SearchWord,home_page,yes_page,not_found_page,logout_view,your_voice,check_login,join_us
+from .views import SearchWord,home_page,yes_page,not_found_page,logout_view,your_voice,check_login,about_bahoz
 from register_k.views import register_page
 from login_k.views import login_page
 from detailview.views import product_detail_view
@@ -39,7 +39,7 @@ urlpatterns = [
     path("your_voice",your_voice),
     path("sl",check_login),
     path("bahoz-team/",team_list,name="bahoz_team"),
-    path("work-with-us",join_us,name="bahoz_join")
+    path("about-bahoz/",about_bahoz,name="about-bahoz")
     ]
 
 if settings.DEBUG:

@@ -21,6 +21,10 @@ def home_page(request):
     return render(request,"Home/home.html",context)
 
 
+def about_bahoz(request):
+    return render(request,'About_us/about_us.html',{})
+
+
 def yes_page(request):
     return render(request,"Checker/Yes_account.html",{})
 
@@ -35,10 +39,6 @@ def not_found_page(request):
 
 def check_login(request):
     return render(request,"Checker/login_signup.html",{})
-
-
-def join_us(request):
-    return render(request,"join_us/join_us.html",{})
 
 
 class SearchWord(ListView):

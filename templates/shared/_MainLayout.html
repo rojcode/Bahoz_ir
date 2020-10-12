@@ -63,6 +63,12 @@
                             class="u-border-2 u-border-{% if request.path == bahoz_team %}active{% endif %}-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-{% if request.path == bahoz_team %}active{% endif %}-white u-text-hover-palette-3-light-1 u-text-white {% if request.path == bahoz_team %}active{% endif %}"
                             href="{{ bahoz_team }}" style="padding: 10px 0;">تیم باهوز</a>
                     </li>
+                    {% url 'about-bahoz' as about_bahoz %}
+                    <li class="u-nav-item"><a
+                            class="u-border-2 u-border-{% if request.path == about_bahoz %}active{% endif %}-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-{% if request.path == about_bahoz %}active{% endif %}-white u-text-hover-palette-3-light-1 u-text-white {% if request.path == about_bahoz %}active{% endif %}"
+                            class="u-border-2 u-border-{% if request.path == about_bahoz %}active{% endif %}-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-{% if request.path == about_bahoz %}active{% endif %}-white u-text-hover-palette-3-light-1 u-text-white {% if request.path == about_bahoz %}active{% endif %}"
+                            href="{{ about_bahoz }}" style="padding: 10px 0;">دربارەی باهوز</a>
+                    </li>
 
 
 
@@ -106,6 +112,14 @@
                                 class="u-button-style u-nav-link {% if request.path == home_url %}active{% endif %}"
                                 href="{{ home_url }}"
                                 style="padding: 10px 0;">خانە</a>
+
+
+                        </li>
+                        {% url 'about-bahoz' as about_bahoz %}
+                        <li class="u-nav-item"><a
+                                class="u-button-style u-nav-link {% if request.path == about_bahoz %}active{% endif %}"
+                                href="{{ about_bahoz }}"
+                                style="padding: 10px 0;">دربارەی باهوز</a>
 
 
                         </li>

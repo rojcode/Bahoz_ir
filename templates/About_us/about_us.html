@@ -1,0 +1,352 @@
+{% extends "shared/_MainLayout.html" %}
+{% load static %}
+
+{% block header_ref %}
+    {#    <link rel="stylesheet" href="{% static 'nicepage.css' %}">#}
+    <style class="u-style">.u-section-2 {
+        min-height: 1154px
+    }
+
+    .u-section-2 .u-shape-1 {
+        width: calc(((100% - 1140px) / 2) + 632px);
+        height: 228px;
+        background-image: none;
+        margin: 731px auto 0 0
+    }
+
+    .u-section-2 .u-layout-wrap-1 {
+        width: 1140px;
+        margin: -899px auto 60px
+    }
+
+    .u-section-2 .u-layout-cell-1 {
+        min-height: 593px
+    }
+
+    .u-section-2 .u-container-layout-1 {
+        padding: 30px 30px 30px 0
+    }
+
+    .u-section-2 .u-text-1 {
+        font-weight: 700;
+        font-size: 4.5rem;
+        letter-spacing: 2px;
+        text-transform: none;
+        margin: 0
+    }
+
+    .u-section-2 .u-text-2 {
+        font-size: 1.125rem;
+        margin: 20px 0 0
+    }
+
+    .u-section-2 .u-btn-1 {
+        text-transform: uppercase;
+        font-weight: 700;
+        background-image: none;
+        border-style: none;
+        margin: 42px auto 0;
+        padding: 18px 66px 19px 64px
+    }
+
+    .u-section-2 .u-image-1 {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/05/Kurdsih_Wariors.jpg");
+        min-height: 593px;
+        background-position: 50% 50%
+    }
+
+    .u-section-2 .u-container-layout-2 {
+        padding: 30px
+    }
+
+    .u-section-2 .u-image-2 {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Sanandaj_ZoorAbad_hill.jpg/1280px-Sanandaj_ZoorAbad_hill.jpg");
+        min-height: 424px;
+        background-position: 50% 50%
+    }
+
+    .u-section-2 .u-container-layout-3 {
+        padding: 20px 0 0
+    }
+
+    .u-section-2 .u-image-3 {
+        min-height: 424px;
+        background-image: url("https://img9.irna.ir/d/r2/2019/10/31/4/156727272.jpg");
+        background-position: 50% 50%
+    }
+
+    .u-section-2 .u-container-layout-4 {
+        padding: 30px
+    }
+
+    .u-section-2 .u-layout-cell-5 {
+        min-height: 424px
+    }
+
+    .u-section-2 .u-container-layout-5 {
+        padding: 30px
+    }
+
+    .u-section-2 .u-icon-1 {
+        height: 64px;
+        width: 64px;
+        margin: 20px 0 0 auto
+    }
+
+    .u-section-2 .u-text-3 {
+        margin-top: 20px;
+        font-size: 1.25rem
+    }
+
+    @media (max-width: 1199px) {
+        .u-section-2 {
+            min-height: 1015px
+        }
+
+        .u-section-2 .u-shape-1 {
+            width: calc(((100% - 940px) / 2) + 548px);
+            margin-top: 616px
+        }
+
+        .u-section-2 .u-layout-wrap-1 {
+            width: 940px;
+            margin-top: -784px
+        }
+
+        .u-section-2 .u-layout-cell-1 {
+            min-height: 489px
+        }
+
+        .u-section-2 .u-image-1 {
+            min-height: 489px
+        }
+
+        .u-section-2 .u-image-2 {
+            min-height: 350px
+        }
+
+        .u-section-2 .u-image-3 {
+            min-height: 350px
+        }
+
+        .u-section-2 .u-layout-cell-5 {
+            min-height: 350px
+        }
+
+        .u-section-2 .u-container-layout-5 {
+            padding-left: 0;
+            padding-right: 0
+        }
+
+        .u-section-2 .u-icon-1 {
+            margin-top: 0
+        }
+
+        .u-section-2 .u-text-3 {
+            margin-bottom: 0
+        }
+    }
+
+    @media (max-width: 991px) {
+        .u-section-2 {
+            min-height: 1103px
+        }
+
+        .u-section-2 .u-shape-1 {
+            width: calc(((100% - 720px) / 2) + 438px);
+            margin-top: 704px
+        }
+
+        .u-section-2 .u-layout-wrap-1 {
+            width: 720px;
+            margin-top: -872px
+        }
+
+        .u-section-2 .u-layout-cell-1 {
+            min-height: 100px
+        }
+
+        .u-section-2 .u-container-layout-1 {
+            padding-left: 0
+        }
+
+        .u-section-2 .u-text-1 {
+            font-size: 3rem
+        }
+
+        .u-section-2 .u-image-1 {
+            min-height: 375px
+        }
+
+        .u-section-2 .u-image-2 {
+            min-height: 268px
+        }
+
+        .u-section-2 .u-container-layout-3 {
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 0
+        }
+
+        .u-section-2 .u-image-3 {
+            min-height: 268px
+        }
+
+        .u-section-2 .u-layout-cell-5 {
+            min-height: 100px
+        }
+    }
+
+    @media (max-width: 767px) {
+        .u-section-2 {
+            min-height: 2579px
+        }
+
+        .u-section-2 .u-shape-1 {
+            width: calc(((100% - 540px) / 2) + 409px);
+            height: 723px;
+            margin-top: 1181px
+        }
+
+        .u-section-2 .u-layout-wrap-1 {
+            width: 540px;
+            margin-top: -1844px
+        }
+
+        .u-section-2 .u-container-layout-1 {
+            padding-right: 10px
+        }
+
+        .u-section-2 .u-text-1 {
+            font-size: 4.5rem
+        }
+
+        .u-section-2 .u-image-1 {
+            min-height: 482px
+        }
+
+        .u-section-2 .u-container-layout-2 {
+            padding-left: 10px;
+            padding-right: 10px
+        }
+
+        .u-section-2 .u-image-2 {
+            min-height: 603px
+        }
+
+        .u-section-2 .u-image-3 {
+            min-height: 603px
+        }
+
+        .u-section-2 .u-container-layout-4 {
+            padding-left: 10px;
+            padding-right: 10px
+        }
+    }
+
+    @media (max-width: 575px) {
+        .u-section-2 {
+            min-height: 2038px
+        }
+
+        .u-section-2 .u-shape-1 {
+            width: calc(((100% - 340px) / 2) + 210px);
+            height: 428px;
+            margin-top: 947px
+        }
+
+        .u-section-2 .u-layout-wrap-1 {
+            width: 340px;
+            margin-top: -1315px
+        }
+
+        .u-section-2 .u-text-1 {
+            font-size: 2.25rem
+        }
+
+        .u-section-2 .u-image-1 {
+            min-height: 303px
+        }
+
+        .u-section-2 .u-image-2 {
+            min-height: 380px
+        }
+
+        .u-section-2 .u-image-3 {
+            min-height: 380px
+        }
+    }</style>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+    <body class="u-body">
+    <section class="u-clearfix u-grey-90 u-section-2">
+        <div class="u-palette-3-base u-shape u-shape-rectangle u-shape-1"></div>
+        <div class="u-clearfix u-disable-padding u-gutter-40 u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
+                <div class="u-layout-col">
+                    <div class="u-size-30">
+                        <div class="u-layout-row">
+                            <div class="u-align-right u-container-style u-expand-resize u-layout-cell u-right-cell u-similar-fill u-size-25 u-layout-cell-1">
+                                <div class="u-container-layout u-container-layout-1">
+                                    <h1 class="u-text u-text-1">دربارە باهوز</h1>
+                                    <p class="u-text u-text-2">باهوز یک تیم نیست بلکە یک خانوادە از کردستان است کە فقط
+                                        یک هدف دارد، هدف باهوز معرفی کردن زبان و فرهنگ کردها بە کشورمان و همچنین بە جهان
+                                        است ، بلە جهان ! همانگونە کە ما در حال یادگیری زبان های دیگری هستیم و در کنار آن
+                                        فرهنگ آن مردم و کشور را هم فرا میگریم ، زبان کردی و فرهنگ کردی هم شایستە همچین
+                                        خدمتی است ، ما با افتخار در حال ساخت یک زیرساخت برای آموزش زبان کردی و همچنین یک
+                                        زیر ساخت برای آشنا کردن مردم جهان و کشورمان ایران با مردم کردستان هستیم، تیم
+                                        باهوز بر این باور است کە کردی فقط مخصوص کردها نیست بلکە تمام ملت ها میتوانند
+                                        کردی یاد بگیرند و زبان کردی قابل مقایسە با تمام زبان های زندە جهان است! ما
+                                        داستان و افسانە های زیبایی داریم کە با هیچ فرهنگ دیگری قابل مقایسە نیست. باهوز
+                                        اینجاست کە زبان کردی و فرهنگ کردی را در قرن ٢١ بە گوش و دید همگان برساند.</p>
+                                    <a href="/bahoz-team/"
+                                       class="u-btn u-button-style u-custom u-palette-3-base u-btn-1">آشنایی با اعضای تیم</a>
+                                </div>
+                            </div>
+                            <div class="u-align-left u-container-style u-image u-layout-cell u-left-cell u-similar-fill u-size-35 u-image-1"
+                                 data-image-width="1600" data-image-height="1025">
+                                <div class="u-container-layout u-valign-bottom u-container-layout-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-size-30">
+                        <div class="u-layout-row">
+                            <div class="u-container-style u-image u-layout-cell u-right-cell u-similar-fill u-size-20 u-size-20-md u-image-2"
+                                 data-image-width="1280" data-image-height="960">
+                                <div class="u-container-layout u-valign-bottom u-container-layout-3"></div>
+                            </div>
+                            <div class="u-align-left u-container-style u-image u-layout-cell u-similar-fill u-size-20 u-size-20-md u-image-3"
+                                 data-image-width="1200" data-image-height="762">
+                                <div class="u-container-layout u-valign-bottom u-container-layout-4"></div>
+                            </div>
+                            <div class="u-align-right u-container-style u-layout-cell u-left-cell u-similar-fill u-size-20 u-size-20-md u-layout-cell-5">
+                                <div class="u-container-layout u-valign-top u-container-layout-5"><span
+                                        class="u-icon u-icon-circle u-text-palette-3-base u-icon-1"><svg
+                                        class="u-svg-link" preserveAspectRatio="xMidYMin slice"
+                                        viewBox="0 0 95.333 95.332" style=""><use xlink:href="#svg-0642"></use></svg><svg
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" xml:space="preserve" class="u-svg-content"
+                                        viewBox="0 0 95.333 95.332" x="0px" y="0px" id="svg-0642"
+                                        style="enable-background:new 0 0 95.333 95.332;"><g><g><path d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"></path><path
+                                        d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"></path>
+</g>
+</g></svg></span>
+                                    <p class="u-text u-text-default u-text-3">تیم باهوز یک محیط صمیمی و گرم دارد اگر میخواهید به تیم باهوز کمک کنید! تنها کاری کە لازم است انجام دهید این است کە با اعضای تیم تماس بگیرید! و توانایی خود را برای باهوز شرح دهید ما بە کمک و انگیزە شما نیازمندیم حتی تشکر یک هموطن بە ما انگیزە میدهد، همچنین گوش باهوز همیشە برای شنیدن انتقاد های شما عزیزان باز است</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+
+
+
+{% endblock %}
