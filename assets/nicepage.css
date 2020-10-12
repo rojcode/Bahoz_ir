@@ -1,4 +1,3 @@
-
 /*begin-commonstyles animate*/@charset "UTF-8";
 
 /*!
@@ -8,9 +7,6 @@
  *
  * Copyright (c) 2019 Daniel Eden
  */
-
-
-
 
 @-webkit-keyframes bounce {
   from,
@@ -17514,7 +17510,7 @@ a.u-button-style.u-border-20 {
 }
 /*begin-variables font-family*/
 .u-body {
-  font-family: 'Open Sans',sans-serif;
+  font-family: Roboto,sans-serif;
 }
 h1,
 h2,
@@ -17522,7 +17518,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Roboto,sans-serif;
+  font-family: 'Open Sans',sans-serif;
 }
 /*end-variables font-family*/
 /*begin-variables color*/
@@ -17542,10 +17538,10 @@ h6 {
 /*end-variables color*/
 /*begin-variables font*/
 .u-custom-font.u-text-font {
-  font-family: 'Open Sans',sans-serif !important;
+  font-family: Roboto,sans-serif !important;
 }
 .u-custom-font.u-heading-font {
-  font-family: Roboto,sans-serif !important;
+  font-family: 'Open Sans',sans-serif !important;
 }
 /*end-variables font*/
 /*begin-variables colors*/
@@ -28579,14 +28575,15 @@ a.u-link.u-text-hover-grey-90:hover {
 .u-header .u-sheet-1 {min-height: 106px}
 .u-header .u-image-1 {animation-duration: 1000ms; margin: 37px auto 0}
 .u-header .u-logo-image-1 {max-width: 53px; max-height: 53px}
-.u-header .u-image-2 {width: 60px; height: 60px; background-image: url("images/IMG_0009.JPG"); background-position: 50% 50%; animation-duration: 1000ms; margin: -60px auto 0 0}
+.u-header .u-image-2 {width: 60px; height: 60px; background-image: url("images/1053500x750_1457112973273990.jpeg"); background-position: 50% 50%; animation-duration: 1000ms; margin: -60px auto 0 0}
 .u-header .u-menu-1 {margin: -52px 0 37px auto}
 .u-header .u-nav-1 {font-size: 1rem; letter-spacing: 0; font-weight: 700; text-transform: uppercase}
 .u-header .u-nav-2 {font-size: 1.25rem}
 @media (max-width: 1199px){ .u-header .u-image-1 {width: 53px}
 .u-header .u-image-2 {margin-top: -53px}
 .u-header .u-menu-1 {width: auto; margin-top: -49px; margin-bottom: 27px} }
-
+@media (max-width: 991px){ .u-header .u-image-2 {margin-top: -53px}
+.u-header .u-menu-1 {margin-top: -49px} }
 
 
  .u-footer .u-sheet-1 {min-height: 244px}
