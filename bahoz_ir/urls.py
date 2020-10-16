@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from bahoz_ir import settings
 from update_k_account.views import update_page
 from .views import SearchWord,home_page,yes_page,not_found_page,logout_view,your_voice,check_login,about_bahoz
@@ -39,7 +39,8 @@ urlpatterns = [
     path("your_voice",your_voice),
     path("sl",check_login),
     path("bahoz-team/",team_list,name="bahoz_team"),
-    path("about-bahoz/",about_bahoz,name="about-bahoz")
+    path("about-bahoz/",about_bahoz,name="about-bahoz"),
+    path('ebahoz/',include('ebahoz.urls',namespace='ebahoz')),
     ]
 
 if settings.DEBUG:

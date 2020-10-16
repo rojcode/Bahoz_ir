@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'wrongword',
     'kurdishdic',
     'contactAdmin',
+    'ebahoz',
+
     ]
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
@@ -133,3 +135,4 @@ STATIC_ROOT = os.path.join(BASE_DIR,"static_cdn","static_root")
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,"static_cdn","media_root")
+

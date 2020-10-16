@@ -1,0 +1,492 @@
+{% extends "shared/_MainLayout.html" %}
+{% block header_ref %}
+    <style class="u-style">.u-section-2 {
+        background-image: url("https://images03.nicepage.io/cf2cc6752a2dcaba8a9b3b5b/814a08b492d55dd780094154/max-duzij-qAjJk-un3BI-unsplash.jpg");
+        background-position: 50% 50%
+    }
+
+    .u-section-2 .u-sheet-1 {
+        min-height: 500px
+    }
+
+    .u-section-2 .u-text-1 {
+        font-size: 3.75rem;
+        font-weight: 700;
+        margin: 60px auto 0
+    }
+
+    .u-section-2 .u-text-2 {
+        width: 613px;
+        font-weight: 700;
+        margin: 20px auto 0
+    }
+
+    .u-section-2 .u-form-1 {
+        width: 570px;
+        margin: 30px auto 60px
+    }
+
+    .u-section-2 .u-btn-1 {
+        border-style: none
+    }
+
+    @media (max-width: 767px) {
+        .u-section-2 .u-text-1 {
+            margin-left: 47px;
+            margin-right: 47px
+        }
+
+        .u-section-2 .u-text-2 {
+            margin-left: 0;
+            margin-right: 0;
+            width: 540px
+        }
+
+        .u-section-2 .u-form-1 {
+            width: 540px;
+            margin-left: 0;
+            margin-right: 0
+        }
+    }
+
+    @media (max-width: 575px) {
+        .u-section-2 .u-text-1 {
+            font-size: 3rem;
+            margin-left: 0;
+            margin-right: 0
+        }
+
+        .u-section-2 .u-text-2 {
+            width: 340px
+        }
+
+        .u-section-2 .u-form-1 {
+            width: 340px
+        }
+
+        .u-section-2 .u-form-group-1 {
+            width: 100%
+        }
+
+        .u-section-2 .u-form-group-2 {
+            width: 100%
+        }
+    }</style>
+    <style class="u-style">.u-section-3 .u-sheet-1 {
+        min-height: 647px
+    }
+
+    .u-section-3 .u-text-1 {
+        margin: 12px auto 0
+    }
+
+    .u-section-3 .u-list-1 {
+        min-height: 490px;
+        grid-template-columns: repeat(3, 33.3333%);
+        grid-template-rows: repeat(1, auto);
+        height: auto;
+        grid-gap: 10px;
+        margin: 12px auto 60px 0
+    }
+
+    .u-section-3 .u-list-item-1 {
+        box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.1)
+    }
+
+    .u-section-3 .u-container-layout-1 {
+        padding: 30px
+    }
+
+    .u-section-3 .u-image-1 {
+        height: 243px;
+        margin: 0 auto 0 0
+    }
+
+    .u-section-3 .u-text-2 {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 20px 0 0
+    }
+
+    .u-section-3 .u-text-3 {
+        margin: 20px auto 0 0
+    }
+
+    .u-section-3 .u-text-4 {
+        font-weight: 700;
+        margin: 20px auto 0 0
+    }
+
+    .u-section-3 .u-btn-1 {
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: -45px 0 0 auto
+    }
+
+    .u-section-3 .u-list-item-2 {
+        box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.1)
+    }
+
+    .u-section-3 .u-container-layout-2 {
+        padding: 30px
+    }
+
+    .u-section-3 .u-image-2 {
+        height: 243px;
+        margin: 0 auto 0 0
+    }
+
+    .u-section-3 .u-text-5 {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 20px 0 0
+    }
+
+    .u-section-3 .u-text-6 {
+        margin: 20px auto 0 0
+    }
+
+    .u-section-3 .u-text-7 {
+        font-weight: 700;
+        margin: 20px auto 0 0
+    }
+
+    .u-section-3 .u-btn-2 {
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: -45px 0 0 auto
+    }
+
+    .u-section-3 .u-list-item-3 {
+        box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.1)
+    }
+
+    .u-section-3 .u-container-layout-3 {
+        padding: 30px
+    }
+
+    .u-section-3 .u-image-3 {
+        height: 243px;
+        margin: 0 auto 0 0
+    }
+
+    .u-section-3 .u-text-8 {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 20px 0 0
+    }
+
+    .u-section-3 .u-text-9 {
+        margin: 20px auto 0 0
+    }
+
+    .u-section-3 .u-text-10 {
+        font-weight: 700;
+        margin: 20px auto 0 0
+    }
+
+    .u-section-3 .u-btn-3 {
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: -45px 0 0 auto
+    }
+
+    @media (max-width: 1199px) {
+        .u-section-3 .u-sheet-1 {
+            min-height: 562px
+        }
+
+        .u-section-3 .u-list-1 {
+            min-height: 404px;
+            grid-template-columns: repeat(3, 33.333333333333336%);
+            margin-right: initial;
+            margin-left: initial
+        }
+
+        .u-section-3 .u-image-1 {
+            height: NaNpx;
+            margin-right: initial;
+            margin-left: initial
+        }
+
+        .u-section-3 .u-text-2 {
+            margin-left: 0;
+            margin-right: 0
+        }
+
+        .u-section-3 .u-image-2 {
+            height: NaNpx;
+            margin-right: initial;
+            margin-left: initial
+        }
+
+        .u-section-3 .u-text-5 {
+            margin-left: 0;
+            margin-right: 0
+        }
+
+        .u-section-3 .u-image-3 {
+            height: NaNpx;
+            margin-right: initial;
+            margin-left: initial
+        }
+
+        .u-section-3 .u-text-8 {
+            margin-left: 0;
+            margin-right: 0
+        }
+    }
+
+    @media (max-width: 991px) {
+        .u-section-3 .u-sheet-1 {
+            min-height: 1081px
+        }
+
+        .u-section-3 .u-list-1 {
+            min-height: 928px;
+            grid-template-columns: repeat(2, 50%);
+            margin-right: initial;
+            margin-left: initial
+        }
+    }
+
+    @media (max-width: 767px) {
+        .u-section-3 .u-sheet-1 {
+            min-height: 1611px
+        }
+
+        .u-section-3 .u-list-1 {
+            min-height: 1479px;
+            grid-template-columns: 100%;
+            width: 540px;
+            margin-right: auto;
+            margin-left: -3px
+        }
+
+        .u-section-3 .u-container-layout-1 {
+            padding-left: 10px;
+            padding-right: 10px
+        }
+
+        .u-section-3 .u-container-layout-2 {
+            padding-left: 10px;
+            padding-right: 10px
+        }
+
+        .u-section-3 .u-container-layout-3 {
+            padding-left: 10px;
+            padding-right: 10px
+        }
+    }
+
+    @media (max-width: 575px) {
+        .u-section-3 .u-sheet-1 {
+            min-height: 1464px
+        }
+
+        .u-section-3 .u-list-1 {
+            min-height: 931px;
+            width: 340px;
+            margin-left: 0
+        }
+    }</style>
+    <style class="u-style">.u-section-4 .u-sheet-1 {
+        min-height: 730px
+    }
+
+    .u-section-4 .u-product-1 {
+        min-height: 574px;
+        height: auto;
+        margin: 60px auto 60px 0
+    }
+
+    .u-section-4 .u-container-layout-1 {
+        padding: 30px 0 30px 30px
+    }
+
+    .u-section-4 .u-image-1 {
+        width: 540px;
+        height: 514px;
+        box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.4);
+        margin: 0 auto 0 0
+    }
+
+    .u-section-4 .u-group-1 {
+        width: 512px;
+        min-height: 514px;
+        margin: -514px 0 0 auto
+    }
+
+    .u-section-4 .u-container-layout-2 {
+        padding: 30px
+    }
+
+    .u-section-4 .u-line-1 {
+        width: 43px;
+        height: 3px;
+        transform-origin: left center;
+        margin: 0 auto 0 0
+    }
+
+    .u-section-4 .u-text-1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 20px 0 0 60px
+    }
+
+    .u-section-4 .u-product-price-1 {
+        margin: 22px 0 0 auto
+    }
+
+    .u-section-4 .u-text-2 {
+        font-weight: 700;
+        font-size: 1.125rem;
+        margin: 18px 0 0 auto
+    }
+
+    .u-section-4 .u-btn-1 {
+        border-style: none;
+        letter-spacing: 3px;
+        background-image: none;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin: 28px 0 0 auto;
+        padding: 10px 65px
+    }
+
+    @media (max-width: 1199px) {
+        .u-section-4 .u-product-1 {
+            margin-right: initial;
+            margin-left: initial
+        }
+
+        .u-section-4 .u-image-1 {
+            width: 440px
+        }
+
+        .u-section-4 .u-group-1 {
+            width: 470px
+        }
+
+        .u-section-4 .u-container-layout-2 {
+            padding-left: 40px
+        }
+    }
+
+    @media (max-width: 991px) {
+        .u-section-4 .u-sheet-1 {
+            min-height: 638px
+        }
+
+        .u-section-4 .u-product-1 {
+            min-height: 477px;
+            margin-right: initial;
+            margin-left: initial
+        }
+
+        .u-section-4 .u-container-layout-1 {
+            padding-right: 0
+        }
+
+        .u-section-4 .u-image-1 {
+            width: 330px;
+            height: 417px
+        }
+
+        .u-section-4 .u-group-1 {
+            width: 360px;
+            min-height: 417px;
+            margin-top: -417px
+        }
+
+        .u-section-4 .u-text-1 {
+            font-size: 2.25rem
+        }
+    }
+
+    @media (max-width: 767px) {
+        .u-section-4 .u-sheet-1 {
+            min-height: 948px
+        }
+
+        .u-section-4 .u-product-1 {
+            min-height: 836px;
+            margin-right: initial;
+            margin-left: initial
+        }
+
+        .u-section-4 .u-container-layout-1 {
+            padding-left: 0
+        }
+
+        .u-section-4 .u-image-1 {
+            height: 458px;
+            margin-right: initial;
+            margin-left: initial;
+            width: auto
+        }
+
+        .u-section-4 .u-group-1 {
+            min-height: 318px;
+            margin-top: 0;
+            margin-right: initial;
+            margin-left: initial;
+            width: auto
+        }
+
+        .u-section-4 .u-container-layout-2 {
+            padding-right: 0;
+            padding-left: 10px
+        }
+
+        .u-section-4 .u-line-1 {
+            margin-left: auto
+        }
+    }
+
+    @media (max-width: 575px) {
+        .u-section-4 .u-text-1 {
+            font-size: 1.5rem;
+            margin-left: 0
+        }
+    }</style>
+{% endblock %}
+
+{% block content %}
+    <section class="u-align-center u-clearfix u-image u-section-2" id="carousel_ee2d" data-image-width="6000"
+             data-image-height="4000">
+        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+            <h2 class="u-text u-text-body-alt-color u-text-1">زانکۆی باهۆز سەکۆی دواڕۆژێکی نوێیە(بێتا)</h2>
+            <h4 class="u-text u-text-white u-text-2">ئەمە ڤێرژنی ئەزموونی زانکۆی باهۆزە لەم ڤێرژنە دا هەوڵ دەدەین باشترین خزمەتگوزاریتان بۆ دابین بکەین و هەروەها ئامادەتان بکەین بۆ ڤێرژنێ ڕەسەن. ئامانجمان ئەوەیە خزمەتگوزاری پەروەردەیی پێشکەش بە هەموو وڵات و پارێزگاکان بکەین، لەم ڤێرژنە دا بۆت دەرکەون کە کارما چییە</h4>
+            <div class="u-form u-form-1">
+                <form action="/course/search" method="get">
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    {# Card #}
+    <section class="u-clearfix u-section-3" id="carousel_ba3b">
+        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+            <h3 class="u-align-center u-text u-text-default u-text-1">فێرکاری نوێ ئەمڕۆ</h3>
+            <div class="u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-list u-repeater u-list-1">
+                {% for cours in courses %}
+                    <div class="u-container-style u-list-item u-repeater-item u-list-item-1">
+                        <div class="u-container-layout u-similar-container u-container-layout-1">
+                            <img src="{{ cours.poster.url }}"
+                                 alt="" class="u-expanded-width u-image u-image-default u-image-1"
+                                 data-image-width="1200"
+                                 data-image-height="1500">
+                            <h5 class="u-align-right u-text u-text-2">{{ cours.title }}&nbsp;</h5>
+                            <p class="u-align-right u-text u-text-default u-text-3">{{ cours.des|truncatewords:20 }}</p>
+                            <h4 class="u-text u-text-default u-text-palette-1-base u-text-4">${{ cours.price }}</h4>
+                            <a href="{{ cours.get_absolute_url }}" class="u-btn u-button-style u-btn-1">کڕین یان داگرتن</a>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
