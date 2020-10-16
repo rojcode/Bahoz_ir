@@ -51,6 +51,8 @@
             </div>
             <div class="u-custom-menu u-nav-container">
                 <ul class="u-nav u-spacing-30 u-unstyled u-nav-1">
+
+
                     {% url 'home' as home_url %}
                     <li class="u-nav-item"><a
                             class="u-border-2 u-border-{% if request.path == home_url %}active{% endif %}-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-{% if request.path == home_url %}active{% endif %}-white u-text-hover-palette-3-light-1 u-text-white {% if request.path == home_url %}active{% endif %}"
@@ -69,6 +71,16 @@
                             class="u-border-2 u-border-{% if request.path == about_bahoz %}active{% endif %}-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-{% if request.path == about_bahoz %}active{% endif %}-white u-text-hover-palette-3-light-1 u-text-white {% if request.path == about_bahoz %}active{% endif %}"
                             href="{{ about_bahoz }}" style="padding: 10px 0;">دربارەی باهوز</a>
                     </li>
+
+                    {% url 'ebahoz:home' as zbahoz %}
+                    <li class="u-nav-item"><a
+                            class="u-border-2 u-border-{% if request.path == zbahoz %}active{% endif %}-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-{% if request.path == zbahoz %}active{% endif %}-white u-text-hover-palette-3-light-1 u-text-white {% if request.path == zbahoz %}active{% endif %}"
+                            class="u-border-2 u-border-{% if request.path == zbahoz %}active{% endif %}-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-{% if request.path == zbahoz %}active{% endif %}-white u-text-hover-palette-3-light-1 u-text-white {% if request.path == zbahoz %}active{% endif %}"
+                            href="{{ zbahoz }}" style="padding: 10px 0;">زانکۆی باهۆز</a>
+                    </li>
+
+
+
 
 
 
@@ -100,6 +112,8 @@
                         </li>
 
 
+
+
                     {% endif %}
                 </ul>
             </div>
@@ -115,6 +129,18 @@
 
 
                         </li>
+
+
+                        {% url 'ebahoz:home' as zbahoz %}
+                        <li class="u-nav-item"><a
+                                class="u-button-style u-nav-link {% if request.path == zbahoz %}active{% endif %}"
+                                href="{{ zbahoz }}"
+                                style="padding: 10px 0;">زانکوی باهۆز</a>
+
+
+                        </li>
+
+
                         {% url 'about-bahoz' as about_bahoz %}
                         <li class="u-nav-item"><a
                                 class="u-button-style u-nav-link {% if request.path == about_bahoz %}active{% endif %}"
