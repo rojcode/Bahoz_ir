@@ -6,6 +6,14 @@
 {% endblock %}
 
 
+{% block title %}
+     پروفایل - {{ request.user.account.username }}
+{% endblock %}
+
+{% block des %}
+    {{ request.user.account.username }}
+{% endblock %}
+
 {% block content %}
     <section class="u-clearfix u-grey-90 u-section-1" id="sec-a72b">
         <img class="u-expand-resize u-expanded-width u-image u-image-1"

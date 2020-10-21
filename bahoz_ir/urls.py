@@ -40,7 +40,6 @@ urlpatterns = [
     path("sl",check_login),
     path("bahoz-team/",team_list,name="bahoz_team"),
     path("about-bahoz/",about_bahoz,name="about-bahoz"),
-    path('ebahoz/',include('ebahoz.urls',namespace='ebahoz')),
     ]
 
 if settings.DEBUG:
