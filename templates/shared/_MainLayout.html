@@ -2,7 +2,9 @@
 <!doctype html>
 <html lang="en" style="font-size: 16px;">
 <head>
-    <title>دیکشنری باهوز</title>
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="{% block des %}{% endblock %}"/
+    <meta name="keywords" content="{% block keywords %}{% endblock %}">
     {% include 'shared/Header_ref.html' %}
     {% block header_ref %}{% endblock %}
 </head>
@@ -15,7 +17,7 @@
            data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0"
            data-animation-direction="Down" style="will-change: transform; animation-duration: 1000ms;">
             <img src="{% static 'images/Mamosta_logo.png' %}" class="u-logo-image u-logo-image-1"
-                 data-image-width="52.5715">
+                 data-image-width="52.5715" alt="لوگوی باهوز">
 
         </a>
 
@@ -72,13 +74,6 @@
                             href="{{ about_bahoz }}" style="padding: 10px 0;">دربارەی باهوز</a>
                     </li>
 
-                    {% url 'ebahoz:home' as zbahoz %}
-                    <li class="u-nav-item"><a
-                            class="u-border-2 u-border-{% if request.path == zbahoz %}active{% endif %}-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-{% if request.path == zbahoz %}active{% endif %}-white u-text-hover-palette-3-light-1 u-text-white {% if request.path == zbahoz %}active{% endif %}"
-                            class="u-border-2 u-border-{% if request.path == zbahoz %}active{% endif %}-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-{% if request.path == zbahoz %}active{% endif %}-white u-text-hover-palette-3-light-1 u-text-white {% if request.path == zbahoz %}active{% endif %}"
-                            href="{{ zbahoz }}" style="padding: 10px 0;">زانکۆی باهۆز</a>
-                    </li>
-
 
 
 
@@ -131,14 +126,7 @@
                         </li>
 
 
-                        {% url 'ebahoz:home' as zbahoz %}
-                        <li class="u-nav-item"><a
-                                class="u-button-style u-nav-link {% if request.path == zbahoz %}active{% endif %}"
-                                href="{{ zbahoz }}"
-                                style="padding: 10px 0;">زانکوی باهۆز</a>
 
-
-                        </li>
 
 
                         {% url 'about-bahoz' as about_bahoz %}
@@ -256,7 +244,7 @@
                 <div class="u-layout-row">
                     <div class="u-align-center-sm u-align-center-xl u-align-center-xs u-align-right-lg u-align-right-md u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
                         <div class="u-container-layout u-valign-top u-container-layout-1">
-                            <img src="{% static 'images/iran-flag-round-small.png' %}" alt=""
+                            <img src="{% static 'images/iran-flag-round-small.png' %}" alt="دیکشنری باهوز"
                                  class="u-image u-image-contain u-image-default u-image-1" data-image-width="500"
                                  data-image-height="500">
                             <p class="u-text u-text-default u-text-1">این وب سایت تابع قوانین جمهوری اسلامی ایران است و
@@ -267,7 +255,7 @@
                         <div class="u-container-layout u-valign-top u-container-layout-2">
                             <a href="" class="u-image u-logo u-image-2" data-image-width="136" data-image-height="120">
                                 <img src="{% static 'images/Mamosta_logo.png' %}" class="u-logo-image u-logo-image-1"
-                                     data-image-width="104.037">
+                                     data-image-width="104.037" alt="لوگوی باهوز">
                             </a>
                             <p class="u-text u-text-2">ساختە شدە با&nbsp; ❤️ و مقدار زیادی قهوە</p>
                         </div>

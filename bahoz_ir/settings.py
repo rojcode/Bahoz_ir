@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'wrongword',
     'kurdishdic',
     'contactAdmin',
-    'ebahoz',
 
     ]
 X_FRAME_OPTIONS = 'SAMEORIGIN'
