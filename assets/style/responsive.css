@@ -1,0 +1,288 @@
+@media only screen and (max-width:1100px){
+    .logo{
+        margin-right: -28px;
+        margin-top: 20px;
+       }
+    .icon-user{
+        margin-left: -10px;
+        margin-top: 5px;
+    }
+    .ba-hooz{
+     left: 40%;
+    }
+    .menu{
+        margin-right: -30px;
+      
+    }
+  
+}
+
+.ba-hooz{
+     font-family: Speda;
+}
+
+
+
+@media only screen and (max-width:1200px){
+    .menu{
+        margin-right: 10px;
+      
+    }
+    .icon-user i{
+    
+        margin-top: 8px;
+    }
+
+   
+}
+@media only screen and (max-width:1046px){
+    .tabligh{
+        margin-right: -20px;
+        margin-top: 27%;
+    }
+    .share-button{
+        margin-left: -20px;
+        margin-top: 26%;
+    }
+}
+
+@media only screen and (max-width:1199px){
+    .logo{
+        margin-right: -16px;
+        margin-top: 30px;
+       }
+    .menu{
+        margin-right: -80px;
+      
+    }
+    .icon-user i{
+        margin-left: -60px;
+        margin-top: 8px;
+    }
+    
+}
+
+@media only screen and (max-width:1090px){
+    .ba-hooz h2{
+        margin-left: -50px;
+     }
+    .menu{
+        margin-right: -30px;
+      
+    }
+    .icon-user i{
+        margin-left: 5px;
+        margin-top: 8px;
+    }
+ 
+}
+
+@media only screen and (max-width:992px){
+    .container-icon {
+        display: none;   
+    }
+    .icon-user{
+        margin-left: 20px;
+        margin-top: 26px;
+    }
+    .icon-user i{
+        margin-left: 20px;
+        margin-top: 47px;
+    }
+    
+    .menu-rsp{
+        display: block;
+        margin-top: -28px;
+        margin-right: 20px;
+        
+    }
+    .user-fa{
+        display: none;
+    }
+    .logo{
+     margin-right: -32px;
+     margin-top: -30px;
+    
+    }
+    .ba-hooz{
+        margin-top: -40px;
+            margin-right: -25px;
+     }
+     .tabligh{
+        margin-right: -30px;
+        margin-top: 26%;
+    }
+    .share-button{
+        margin-left: 40px;
+        margin-top: 25%;
+    }
+}
+
+@media only screen and (max-width:770px){
+    .ba-hooz{
+        right: 38%;
+        font-size: 80px;
+        margin-top: -20%;
+        font-family: Speda;
+       }
+}
+
+@media only screen and (max-width:700px){
+    .logo{
+        margin-right: -35px;
+        top: 40%;
+       }
+       .ba-hooz{
+        right: 40%;
+        font-size: 80px;
+        margin-top: -20%;
+        font-family: Speda;
+       }
+    .share-button{
+        margin-left: -20px;
+        margin-top: 41%;
+    }
+}
+@media only screen and (max-width:670px){
+    .logo{
+        margin-right: -40px;
+        top: 40%;
+       }
+       .ba-hooz{
+        right: 40%;
+        font-size: 80px;
+        margin-top: -20%;
+        font-family: Speda;
+       }
+}
+.icon-user{
+    margin-left: 20px;
+    margin-top: -6px;
+}
+.tabligh{
+    margin-right: 10px;
+    margin-top: 42%;
+    font-size: 30px;
+}
+.share-button{
+    margin-left: 10px;
+    margin-top: 41%;
+}
+
+@media only screen and (max-width:600px){
+    .container-icons i{
+        font-size: 25px;
+    }
+    .con-fo i{
+        font-size: 20px;
+    }
+    .tabligh{
+        margin-right: 10px;
+        font-size: 25px;
+       
+    }
+    
+    .logo{
+        margin-right: -43px;
+        top: 20%px;
+       }
+       .icon-user{
+        margin-left: 20px;
+        margin-top: -2px;
+    }
+    .ba-hooz{
+        right: 41%;
+        font-size: 80px;
+        margin-top: -20%;
+        font-family: Speda;
+    }
+}
+@media only screen and (max-width:500px){
+    .khat-dic{
+        width: 200px;
+    }
+    .logo{
+        width: 100px;
+        height: 100px;
+      margin-right: -22px;
+      top:20px;
+    }
+    .ba-hooz{
+        right: 41%;
+        font-size: 60px;
+        margin: auto;
+        margin-top: -20%;
+        
+    }
+    .kalame{
+        font-size: 30px;
+    }
+    .icon-user{
+        margin-left: 20px;
+        margin-top: -6px;
+    }
+    .ba-hooz{
+        right: 40%;
+        font-size: 50px;
+    
+        
+    }
+  
+}
+@media only screen and (max-width:400px){
+    .kalame{
+        font-size: 23px;
+    }
+    .logo{
+        width: 90px;
+        height: 90px;
+        margin-right: -25px;
+        top: 20px;
+      }
+      .icon-user{
+        margin-left: 20px;
+        margin-top: -6px;
+    }
+    .ba-hooz{
+        right: 35%;
+        font-size: 50px;
+    
+        
+    }
+    .tabligh{
+        font-size: 14px;
+    }
+    .share-button{
+        left: 10px;
+       
+    }
+    }
+@media only screen and (max-width:300px){
+    .tabligh{
+        font-size: 15px;
+    }
+    .share-button{
+        left: 10px;
+      
+    }
+    .ba-hooz{
+        right: 41%;
+        font-size: 40px;
+        margin: auto;
+        margin-top: -20%;
+    }
+    .container-icon{
+        margin-right: 20px;
+    }
+    .icon-user{
+        margin-left: 20px;
+        margin-top: -6px;
+    }
+    .logo{
+        top: 190%;
+        width: 70px;
+        height: 70px;
+        margin-right: -22px;
+    
+    }
+}

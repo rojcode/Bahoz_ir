@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.urls import path,include
 from bahoz_ir import settings
 from update_k_account.views import update_page
-from .views import SearchWord,home_page,yes_page,not_found_page,logout_view,your_voice,check_login,about_bahoz
+from .views import SearchWord,home_page,yes_page,not_found_page,logout_view,your_voice,check_login,about_bahoz, \
+    SearchSad,home_sad
 from register_k.views import register_page
 from login_k.views import login_page
 from detailview.views import product_detail_view
@@ -40,6 +41,9 @@ urlpatterns = [
     path("sl",check_login),
     path("bahoz-team/",team_list,name="bahoz_team"),
     path("about-bahoz/",about_bahoz,name="about-bahoz"),
+    # delete
+    path('sadd',home_sad,name='home2'),
+    path('words/search/sadd',SearchSad.as_view(),name='search2'),
     ]
 
 if settings.DEBUG:
