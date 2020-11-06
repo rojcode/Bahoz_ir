@@ -1,0 +1,37 @@
+{% extends 'MoT/base.html' %}
+{% load static %}
+
+{% block content %}
+
+        <div class="container">
+        <form action="/words/search/sadd" method="get">
+            <h1 class="text-white t-c kalame">چه کلمه ای را به کوردی میخواید؟</h1>
+            <div class="serch-con d-flex">
+                <input type="text" class="input-search outline-0" placeholder="کلمه مد نظرتون رو بنویسید" name="q"/>
+                <input type="submit" class="btn-search" value="جست و جو">
+                <h2 class="khat t-c">--------------------------</h2>
+            </div>
+  </form>
+            <div class="row">
+                {% for foo in object_list %}
+                    <div class="col-12">
+                    <div class="dictionry d-flex">
+                        <p class="p-dict p-1">سورانی</p>
+                        <p class="p-dict p-2">{{ foo.sorani }}</p>
+                        <div class="khat-dic"></div>
+                        <p class="p-dict p-3">فارسی</p>
+                        <p class="p-dict p-4">{{ foo.persian }}</p>
+                        <a href="#" class="a-icon d-flex">
+                            <i class="fas fa-pen"></i>
+                            <div class="icon-2-con">
+                                <i class="fas fa-check"></i>
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+{% endblock %}

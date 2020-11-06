@@ -21,6 +21,15 @@ def home_page(request):
     return render(request,"Home/home.html",context)
 
 
+def home_sad(request):
+    count_word = kurdishdic.objects.all().count()
+    context = {
+        'count': count_word
+        }
+
+    return render(request,"MoT/mal.html",context)
+
+
 def about_bahoz(request):
     return render(request,'About_us/about_us.html',{})
 
@@ -43,6 +52,30 @@ def check_login(request):
 
 class SearchWord(ListView):
     template_name = 'Home/home.html'
+    paginate_by = 6
+
+    def get_context_data(self,**kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # Add in a QuerySet of all the books
+        context['count'] = kurdishdic.objects.all().count()
+        return context
+
+    def get_queryset(self):
+        request = self.request
+        query = request.GET.get('q')
+        lookup = (
+                Q(persian__icontains=query) |
+                Q(sorani__contains=query)
+        )
+
+        if query is not None:
+            word = kurdishdic.objects.filter(lookup)
+            return word
+
+
+class SearchSad(ListView):
+    template_name = 'MoT/mal.html'
     paginate_by = 6
 
     def get_context_data(self,**kwargs):
